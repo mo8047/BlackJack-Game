@@ -45,25 +45,26 @@ while u_input == "y":
     elif another_draw == "n":
         print("Fine")
 
-
-
 #make sure computer is >17
     while sum_computer < 17:
         computer.append(random.choice(cards))
         sum_computer = sum(computer)
 
+    if 11 in cards and sum(cards) > 21:
+        cards.remove(11)
+        cards.append(1)
     if sum_user > 21:
-        print("You lost your total is greater than 21")
+        print("You Bust, Computer wins")
         u_input = ("Play again?: (y/n)")
         continue
     elif sum_computer > 21:
-        print(f"User wins because the computer's sum is greater than 21 the cards are {user} and the sum is {sum_user}")
+        print(f"Computer Bust, you win")
     elif sum_user == sum_computer:
-        print("It's a draw")
+        print("Draw")
     elif sum_computer > sum_user:
-        print(f"Computer wins with a sum of {sum_computer}")
+        print(f"Computer wins with a totsl of: {sum_computer}")
     elif sum_user > sum_computer:
-        print(f"User wins with a sum of {sum_user}")
+        print(f"User wins with a total of: {sum_user}")
 
     print(f"Computer {sum_computer, computer} User: {sum_user, user}")
 
