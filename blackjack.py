@@ -2,22 +2,6 @@ import random
 cards = [11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10]
 
 
-# Basic program:
-
-# compile1 = random.choice(cards)
-# compile2 = random.choice(cards)
-# compile3 = random.choice(cards)
-# compile4 = random.choice(cards)
-#
-# user.append(compile1)
-# user.append(compile3)
-#
-# computer.append(compile2)
-# computer.append(compile4)
-
-# User CLI:
-
-
 u_input = input("Would you like to play?: (y/n)")
 while u_input == "y":
     from art import logo
